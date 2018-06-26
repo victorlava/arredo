@@ -1,0 +1,27 @@
+$red: #221f20;
+$black: #221f20;
+$grey: #CAC8E2;
+$grey-light: #c7c7c7;
+$white: #FFF;
+$blue-dark: #06041D;
+
+$color-primary: $black;
+$color-secondary: $blue-dark;
+
+$font-size: 18px;
+$font-size-multiplier: 0.8;
+
+@include media-breakpoint-up(sm) {
+    $font-size: 20px;
+    $font-size-multiplier: 1;
+}
+$font-size-1: 4.35rem * $font-size-multiplier; // 87px
+$font-size-2: 4rem * $font-size-multiplier; // 80px
+$font-size-3: 2.9rem * $font-size-multiplier; // 58px
+$font-size-4: 2.25rem * $font-size-multiplier; // 45px
+$font-size-5: 1.95rem * $font-size-multiplier; // 39px
+$font-size-6: 1.8rem * $font-size-multiplier; // 36px
+$font-size-navigation: 1.5rem; // 30px
+
+$primary-font: "Unica One", "Tahoma", sans-serif;
+$secondary-font: "Segoe UI", "Tahoma", sans-serif;

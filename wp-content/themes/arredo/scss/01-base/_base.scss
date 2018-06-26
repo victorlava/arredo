@@ -1,0 +1,85 @@
+html {
+    font-size: $font-size;
+}
+
+body {
+    font-size: 1rem;
+    font-family: $secondary-font;
+    margin: 0;
+    color: $color-primary;
+}
+
+p {
+    line-height: 1.65;
+    &.spaced {
+        font-weight: 300;
+        letter-spacing: 4px;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s ease;
+    color: $color-primary;
+
+    &:hover {
+        opacity: 0.7 !important;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6, .navigation{
+    font-family: $primary-font;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+
+h1 {
+    font-size: $font-size-1;
+}
+
+h2 {
+    font-size: $font-size-2;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+}
+
+h3 {
+    font-size: $font-size-3;
+}
+
+h4 {
+    font-size: $font-size-4;
+}
+
+h5 {
+    font-size: $font-size-5;
+}
+
+h6 {
+    font-size: $font-size-6;
+}
+
+blockquote {
+    line-height: 1.2rem;
+}
+
+@include media-breakpoint-down(sm) {
+    main > section:first-child { padding-top: 0; }
+}
+
+// @include media-breakpoint-up(1560) {
+//     .container {
+//         max-width: 1575px;
+//     }
+// }

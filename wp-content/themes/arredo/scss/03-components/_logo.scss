@@ -1,0 +1,13 @@
+.logo {
+    width: 300px;
+    display: block;
+
+    @include media-breakpoint-up(xl) {
+        width: 493px;
+    }
+
+     &.logo-xs {
+         width: 304px;
+     }
+
+}

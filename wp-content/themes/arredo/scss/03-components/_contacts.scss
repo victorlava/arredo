@@ -1,0 +1,11 @@
+ul.contacts {
+    line-height: 1.7;
+    list-style: none;
+    a {
+        padding: .5px 0;
+        display: block;
+        letter-spacing: 3.6px;
+        &:first-child { padding-top: 0; }
+    }
+
+}

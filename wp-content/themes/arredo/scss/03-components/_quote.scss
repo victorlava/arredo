@@ -1,0 +1,58 @@
+.quote {
+    text-align: center;
+    width: 100%;
+
+
+
+
+    p {
+        &:before, &:after {
+
+        }
+    }
+
+    .title {
+        margin-top: 0;
+        &:after, &:before {
+            content: " ";
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: calc(43px / 1.5);
+            height: calc(34px / 1.5);
+            display: inline-block;
+            margin: 5px 17px;
+        }
+
+        &:before {
+            background-image: url('/img/quote-up.png');
+        }
+
+        &:after {
+            background-image: url('/img/quote-down.png');
+        }
+    }
+
+
+    cite {
+        font-family: $secondary-font;
+        letter-spacing: 8px;
+        font-weight: 300;
+        font-style: normal;
+        font-size: $font-size;
+        border-top: 1px solid white;
+        padding-top: 23px;
+
+        &:after, &:before {
+            content: " — ";
+            position: relative;
+        }
+
+        &:after {
+            left: 0;
+        }
+
+        &:before {
+            right: 0;
+        }
+    }
+}

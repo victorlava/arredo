@@ -1,0 +1,95 @@
+.section-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding-top: 0;
+    padding: 1.95rem;
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: row;
+        padding: 0;
+        // .address-wrapper, img { padding-left: 5rem; }
+        // img { float: right; }
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-end;
+            img, .address-wrapper { width: 95%; }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        .contact-wrapper {
+            img, .address-wrapper { width: 75%; }  
+        }
+    }
+
+    > div:nth-child(1) {
+        flex: 100%;
+        background-position: center left;
+        @include media-breakpoint-up(lg) {
+            flex: 7 7;
+        }
+    }
+
+    > div:nth-child(2) {
+        flex: 1 1;
+    }
+
+    > div:nth-child(3) { flex: 4 4; }
+
+    .contact-box {
+        background-image: url('/img/background-intro.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right;
+        color: white;
+        padding: 4rem 2rem;
+        margin: 2rem -1.95rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 10rem 0;
+            transform: translateY(-150px);
+            margin: 0;
+            h2, div { margin-left: 4rem; }
+        }
+
+        h2 { margin-top: 0rem; }
+        h4 { margin-bottom: .5rem; }
+        div { margin-bottom: 1rem; }
+        a { color: white; }
+
+    }
+
+    .address-wrapper {
+
+        @include media-breakpoint-up(lg) {
+            float: right;
+        }
+
+        .address {
+            width: 100%;
+            &.img-styling-top:before { display: none; }
+
+            @include media-breakpoint-up(lg) {
+                h3 { max-width: 350px; }
+                float: left;
+                width: calc(50% - 3rem);
+                &.img-styling-top:before {
+                    top: -5%;
+                    display: block;
+                    left: -5%;
+                    transform-origin: center center;
+                    transform: rotate(90deg) translateY(-50%);
+                }
+
+                &:nth-child(1) { margin-right: 1.5rem; }
+                &:nth-child(2) { margin-left: 1.5rem; }
+            }
+        }
+    }
+
+}
