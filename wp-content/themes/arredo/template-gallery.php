@@ -41,7 +41,6 @@
                 $image_1 = get_sub_field('image_1');
                 $image_2 = get_sub_field('image_2');
 
-                print_r($position);
                 $verticalClass = ($vertical == 1)? ' section-vertical' : '';
                 $positionClass = ($position == 0)? ' section-left' : ' section-right';
                 $positionClass = ($vertical == 1)? '' : $positionClass;
@@ -63,13 +62,17 @@
                     </div>
                     <div class="col-xs-12 col-md-6">
                         <div class="img img-line img-styling-right">
-                              <img class="d-block w-100" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                <a href="<?php the_sub_field('link_1'); ?>">
+                                    <img class="d-block w-100" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                </a>
                         </div>
                     </div>
                     <?php elseif ($position == 1): ?>
                         <div class="col-xs-12 col-md-6">
                             <div class="img img-line img-styling-right">
-                                <img class="d-block w-100" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                <a href="<a href="<?php the_sub_field('link_1'); ?>">">
+                                    <img class="d-block w-100" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                </a>
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6 align-vertical">
@@ -86,7 +89,9 @@
                     <?php else: ?>
                         <div class="col-xs-12 col-lg-6">
                             <div class="img img-line img-styling-bottom">
-                                <img src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                <a href="<?php the_sub_field('link_1')?>">
+                                    <img src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
+                                </a>
                             </div>
                             <div class="content">
                                 <h2>
@@ -111,7 +116,9 @@
                                 </p>
                             </div>
                             <div class="img img-line img-styling-top">
-                                <img src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
+                                <a href="<?php the_sub_field('link_2')?>">
+                                    <img src="<?php echo $image_2['url']; ?>" alt="<?php echo $image_2['alt']; ?>" />
+                                </a>
                             </div>
                         </div>
                     <?php endif; ?>

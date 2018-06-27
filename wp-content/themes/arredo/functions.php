@@ -431,25 +431,25 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function create_post_type_html5()
 {
-    register_post_type('projektas', // Register Custom Post Type
+    register_post_type('galerija', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('Projects', 'html5blank'), // Rename these to suit
-            'singular_name' => __('Project', 'html5blank'),
+            'name' => __('Galerija', 'html5blank'), // Rename these to suit
+            'singular_name' => __('Galerija', 'html5blank'),
             'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New Project', 'html5blank'),
+            'add_new_item' => __('Add New Galerija', 'html5blank'),
             'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit Project', 'html5blank'),
-            'new_item' => __('New Project', 'html5blank'),
-            'view' => __('View Project', 'html5blank'),
-            'view_item' => __('View Project', 'html5blank'),
-            'search_items' => __('Search Project', 'html5blank'),
+            'edit_item' => __('Edit Galerija', 'html5blank'),
+            'new_item' => __('New Galerija', 'html5blank'),
+            'view' => __('View Galerija', 'html5blank'),
+            'view_item' => __('View Galerija', 'html5blank'),
+            'search_items' => __('Search Galerija', 'html5blank'),
             'not_found' => __('No Projects found', 'html5blank'),
             'not_found_in_trash' => __('No Project Custom Posts found in Trash', 'html5blank')
         ),
         'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
+        'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => false,
         'supports' => array(
             'title',
             'editor',
