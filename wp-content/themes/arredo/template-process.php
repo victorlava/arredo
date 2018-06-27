@@ -55,8 +55,7 @@
 								<?php while (have_rows('carousel_images')) : the_row(); ?>
 								<?php $image = get_sub_field('image'); ?>
 								<?php $className = ($i == 0)? ' active': ''; ?>
-                                <div class="carousel-item<?php echo $className; ?>">
-                                  <img class="d-block w-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                <div class="carousel-item<?php echo $className; ?>" style="background-image:url('<?php echo $image['url']; ?>');">
                                 </div>
 								<?php $i++; ?>
 								<?php endwhile; ?>

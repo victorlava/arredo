@@ -41,7 +41,7 @@
                     <?php if ($className == ' section-left'): ?>
                         <div class="col-xs-12 col-md-6 align-vertical">
                             <div class="content">
-                                <h2><a href="<?php the_sub_field('link');?>"><?php the_sub_field('heading'); ?></a></h2>
+                                <h2><?php the_sub_field('heading'); ?></h2>
                                 <p class="spaced"><?php the_sub_field('text'); ?></p>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                         <?php endif; ?>
                         <div class="col-xs-12 col-md-6 align-vertical">
                             <div class="content">
-                                <h2><a href="<?php the_sub_field('link');?>"><?php the_sub_field('heading'); ?></a></h2>
+                                <h2><?php the_sub_field('heading'); ?></h2>
                                 <p class="spaced"><?php the_sub_field('text'); ?></p>
                             </div>
                         </div>
@@ -81,22 +81,36 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <div class="section-gallery-background big"
-                        style="background-image:url('<?php echo get_field('image_1')['url']; ?>');">
-                    </div>
+                        <div class="section-gallery-background big" style="background-image:url('<?php echo get_field('image_1')['url']; ?>');">
+                            <a href="<?php the_field('image_1_link'); ?>"></a>
+                        </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <div class="section-gallery-background"
-                        style="background-image:url('<?php echo get_field('image_1')['url']; ?>');"></div>
-                        <div class="section-gallery-text img img-line">
-                            <h2><?php the_field('images_heading'); ?></h2>
-                            <p class="spaced"><?php the_field('images_text'); ?></p>
+                        <div class="section-gallery-background" style="background-image:url('<?php echo get_field('image_2')['url']; ?>');">
+                            <a href="<?php the_field('image_2_link'); ?>"></a>
                         </div>
-                        <div class="section-gallery-background"
-                        style="background-image:url('<?php echo get_field('image_1')['url']; ?>');"></div>
+                        <div class="section-gallery-text img img-line">
+                            <a href="<?php the_field('heading_link'); ?>">
+                                <h2><?php the_field('images_heading'); ?></h2>
+                                <p class="spaced"><?php the_field('images_text'); ?></p>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-7">
+                                <div class="section-gallery-background" style="background-image:url('<?php echo get_field('image_3')['url']; ?>');">
+                                    <a href="<?php the_field('image_3_link'); ?>"></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-5">
+                                <div class="section-gallery-background" style="background-image:url('<?php echo get_field('image_4')['url']; ?>');">
+                                    <a href="<?php the_field('image_4_link'); ?>"></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <?php get_template_part('cta'); ?>

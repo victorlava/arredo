@@ -26,7 +26,7 @@
 		<nav class="navigation<?php echo $navClass; ?>">
 		    <div class="container">
 		        <div class="navigation-wrapper">
-		            <a href="<?php echo home_url(); ?>" class="logo mr-auto">
+		            <a href="<?php echo home_url(); ?>" class="logo logo-xs mr-auto">
 		                <img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $logoName; ?>" alt="">
 		            </a>
 

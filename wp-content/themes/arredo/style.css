@@ -1911,6 +1911,10 @@ html {
   position: relative;
   display: none;
   align-items: center;
+  height: 25vw;
+  max-height: 490px;
+  min-height: 300px;
+  background-size: cover;
   width: 100%;
   transition: transform 0.6s ease;
   backface-visibility: hidden;
@@ -2558,9 +2562,15 @@ blockquote {
 }
 
 @media (min-width: 992px) {
-  .section.section-gallery .row {
+  .section.section-gallery > .container > .row {
     margin-left: -13vw;
   }
+}
+
+.section.section-gallery a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .section.section-gallery .section-gallery-background {
@@ -2626,6 +2636,12 @@ blockquote {
 @media (min-width: 992px) {
   .section.section-featured .content h2 {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section.section-featured {
+    padding: 8rem 0 5.5rem 0;
   }
 }
 
@@ -2965,7 +2981,7 @@ ul.contacts a:first-child {
 
 @media (min-width: 992px) {
   .section-cta .arrow.arrow-left {
-    width: 15%;
+    width: 30%;
   }
 }
 
@@ -2994,6 +3010,14 @@ ul.contacts a:first-child {
 @media (max-width: 1199.98px) {
   .section-cta .btn {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-cta a {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
   }
 }
 
@@ -3032,11 +3056,11 @@ ul.contacts a:first-child {
 }
 
 .quote .title:before {
-  background-image: url("/img/quote-up.png");
+  background-image: url("img/quote-up.png");
 }
 
 .quote .title:after {
-  background-image: url("/img/quote-down.png");
+  background-image: url("img/quote-down.png");
 }
 
 .quote cite {
@@ -3121,6 +3145,9 @@ ul.contacts a:first-child {
   position: absolute;
   z-index: 2;
   top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   transform: translateY(-50%);
 }
 
@@ -3132,15 +3159,15 @@ ul.contacts a:first-child {
 
 @media (min-width: 1200px) {
   .img.img-wooden-circle:after {
-    width: 500px;
-    height: 500px;
+    width: 480px;
+    height: 480px;
   }
 }
 
 @media (min-width: 1575px) {
   .img.img-wooden-circle:after {
-    width: 570px;
-    height: 570px;
+    width: 610px;
+    height: 610px;
   }
 }
 
@@ -3172,3 +3199,6 @@ ul.contacts a:first-child {
 }
 
 /* 04. Pages */
+.page-template-template-process .section-heading h1 {
+  text-transform: uppercase;
+}
