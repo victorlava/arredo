@@ -103,8 +103,6 @@
             </div>
         </section>
 
-        <?php get_template_part('quote'); ?>
-
         <?php if (have_rows('objects')): ?>
         <?php $i = 0; ?>
         <?php while (have_rows('objects')) : the_row(); ?>
