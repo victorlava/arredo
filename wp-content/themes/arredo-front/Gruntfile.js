@@ -5,10 +5,9 @@ module.exports = function(grunt) {
     php: {
 		dist: {
 			options: {
-				port: 94,
+				port: 96,
                 hostname: '0.0.0.0',
-                keepalive: true,
-                base: 'www'
+                keepalive: true
 			}
 		},
 	},
@@ -22,23 +21,23 @@ module.exports = function(grunt) {
           outputStyle: 'expanded'
         },
         files: {
-          'www/css/style.css': 'scss/style.scss'
+          'style.css': 'scss/style.scss'
         }
       }
     },
 
     watch: {
       grunt: {
-        files: ['Gruntfile.js', 'www/*/**']
+        files: ['Gruntfile.js', '*']
       },
       sass: {
         files: 'scss/**/*.scss',
         tasks: ['sass']
       },
-      options: {
+      options: { 
         livereload: true,
         host: 'localhost',
-        port: 35729
+        port: 35728
       } //Add Live Reload Chrome Extension for this to work
     },
 
@@ -48,7 +47,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'js/',
           src: ['*.js'],
-          dest: 'www/js',
+          dest: 'js',
           ext: '.min.js',
         }],
       },
@@ -58,9 +57,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'www/css',
+          cwd: 'css',
           src: ['*.css'],
-          dest: 'www/css',
+          dest: 'css',
           ext: '.min.css'
         }]
       }
