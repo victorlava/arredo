@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <div class="img img-line img-styling-right">
+                        <div class="img img-line img-styling-left">
                                 <a href="<?php the_sub_field('link_1'); ?>">
                                     <img class="d-block w-100" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
                                 </a>
@@ -70,7 +70,7 @@
                     <?php elseif ($position == 1): ?>
                         <div class="col-xs-12 col-md-6">
                             <div class="img img-line img-styling-right">
-                                <a href="<a href="<?php the_sub_field('link_1'); ?>">">
+                                <a href="<?php the_sub_field('link_1'); ?>">
                                     <img class="d-block w-100" src="<?php echo $image_1['url']; ?>" alt="<?php echo $image_1['alt']; ?>" />
                                 </a>
                             </div>

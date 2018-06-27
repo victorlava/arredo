@@ -3177,6 +3177,11 @@ ul.contacts a:first-child {
     transform: translateX(-50%);
     right: 0;
   }
+  .img.img-styling-right:before {
+    right: -2rem;
+    left: auto;
+    transform: translateX(50%);
+  }
 }
 
 @media (min-width: 992px) {
