@@ -10,7 +10,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@-ms-viewport { 
+@-ms-viewport {
   width: device-width;
 }
 
@@ -2200,14 +2200,14 @@ blockquote {
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/fonts/subset-SegoeUI.woff2") format("woff2"), url("/fonts/subset-SegoeUI.woff") format("woff");
+  src: url("fonts/subset-SegoeUI.woff2") format("woff2"), url("fonts/subset-SegoeUI.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Segoe UI';
-  src: url("/fonts/subset-SegoeUI-Light.woff2") format("woff2"), url("/fonts/subset-SegoeUI-Light.woff") format("woff");
+  src: url("fonts/subset-SegoeUI-Light.woff2") format("woff2"), url("fonts/subset-SegoeUI-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -3074,7 +3074,7 @@ ul.contacts a:first-child {
 .img.img-wooden:before {
   display: none;
   content: " ";
-  background-image: url("/img/line-wooden.png");
+  background-image: url("img/line-wooden.png");
   background-size: cover;
   height: 8px;
   width: 35%;
@@ -3113,7 +3113,7 @@ ul.contacts a:first-child {
 .img.img-wooden-circle:after {
   display: none;
   content: " ";
-  background-image: url("/img/circle-wooden.png");
+  background-image: url("img/circle-wooden.png");
   background-size: cover;
   width: 400px;
   height: 400px;
