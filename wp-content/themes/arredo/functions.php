@@ -68,8 +68,8 @@ function arredo_nav()
         'theme_location' => 'header-menu',
         'menu' => '',
         'container' => false,
-        'menu_class' => 'asd',
-        'menu_id' => 'asd',
+        'menu_class' => '',
+        'menu_id' => '',
         'echo' => true,
         'fallback_cb' => 'wp_page_menu',
         'before' => '',
@@ -82,6 +82,51 @@ function arredo_nav()
         )
     );
 }
+
+function arredo_footer_nav_left()
+{
+    wp_nav_menu(
+    array(
+        'theme_location' => 'footer-menu-left',
+        'menu' => '',
+        'container' => false,
+        'menu_class' => '',
+        'menu_id' => '',
+        'echo' => true,
+        'fallback_cb' => 'wp_page_menu',
+        'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'items_wrap' => '<ul class="contacts">%3$s</ul>',
+        'depth' => 0,
+        'walker' => ''
+        )
+    );
+}
+
+function arredo_footer_nav_right()
+{
+    wp_nav_menu(
+    array(
+        'theme_location' => 'footer-menu-right',
+        'menu' => '',
+        'container' => false,
+        'menu_class' => '',
+        'menu_id' => '',
+        'echo' => true,
+        'fallback_cb' => 'wp_page_menu',
+        'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'items_wrap' => '<ul class="contacts">%3$s</ul>',
+        'depth' => 0,
+        'walker' => ''
+        )
+    );
+}
+
 
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
@@ -116,8 +161,8 @@ function register_html5_menu()
 {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'html5blank'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'html5blank'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
+        'footer-menu-left' => __('Footer Menu (left)', 'html5blank'), // Sidebar Navigation
+        'footer-menu-right' => __('Footer Menu (right)', 'html5blank') // Extra Navigation if needed (duplicate as many as you need!)
     ));
 }
 
