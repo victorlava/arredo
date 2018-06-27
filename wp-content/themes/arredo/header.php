@@ -18,25 +18,19 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<nav class="navigation navigation-default">
+		<?php
+            $navClass = (is_front_page()) ? ' navigation-white' : ' navigation-default';
+            $logoName = (is_front_page()) ? 'logo-white.png' : 'logo.png';
+        ?>
+
+		<nav class="navigation<?php echo $navClass; ?>">
 		    <div class="container">
 		        <div class="navigation-wrapper">
 		            <a href="<?php echo home_url(); ?>" class="logo mr-auto">
-		                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
+		                <img src="<?php echo get_template_directory_uri(); ?>/img/<?php echo $logoName; ?>" alt="">
 		            </a>
 
-					<!-- <?php html5blank_nav(); ?> -->
-		            <ul class="menu">
-		                <li>
-		                    <a href="process.php">Procesas</a>
-		                </li>
-		                <li>
-		                    <a href="gallery.php">Galerija</a>
-		                </li>
-		                <li>
-		                    <a href="contact.php">Kontaktai</a>
-		                </li>
-		            </ul>
+					<?php arredo_nav(); ?>
 		        </div>
 		    </div>
 		</nav>
