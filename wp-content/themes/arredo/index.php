@@ -1,4 +1,4 @@
-<?php /* Template Name: Home Template */ get_header(); ?>
+<?php get_header(); ?>
 
     <main>
 
@@ -49,7 +49,6 @@
                         <?php if ($image): ?>
                         <div class="col-xs-12 col-md-6">
                             <div class="img img-wooden img-styling-left">
-                                <img src="/img/furniture.png" alt="">
                                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                             </div>
                         </div>
@@ -58,8 +57,7 @@
                         <?php $image = get_sub_field('image'); ?>
                         <?php if ($image): ?>
                         <div class="col-xs-12 col-md-6">
-                            <div class="img img-wooden img-styling-left">
-                                <img src="/img/furniture.png" alt="">
+                            <div class="img img-wooden img-styling-right">
                                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                             </div>
                         </div>

@@ -1,67 +1,83 @@
 <?php get_header(); ?>
 
-	<main role="main">
-	<!-- section -->
-	<section>
+    <?php $background = get_field('background'); ?>
+    <main>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+        <section class="section section-heading section-heading-xs">
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1><?php the_title(); ?></h1>
+                    </div>
+                </div>
+            </div>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+            <div class="heading-flex">
+                <div class="heading-column background"
+                style="background-image:url(<?php echo $background['url']; ?>);">
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+                </div>
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+                <div class="heading-column">
 
-			<?php the_content(); // Dynamic Content ?>
+                </div>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+                <div class="heading-column heading-reverse">
+                    <div class="heading-row background"
+                    style="background-image:url(<?php echo $background['url']; ?>);">
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+                    </div>
+                </div>
+            </div>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+        </section>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 
-			<?php comments_template(); ?>
+        <section class="section section-simple section-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 align-vertical">
+                        <div class="content">
+                            <h3 class="sub-title"><?php the_field('sub_heading'); ?></h3>
+                            <h2><?php the_field('heading'); ?></h2>
+                            <p class="spaced">
+                                <?php the_field('description'); ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <?php $image = get_field('image'); ?>
+                        <?php if ($image): ?>
+                        <div class="img img-line img-styling-left">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		</article>
-		<!-- /article -->
+        <?php if (have_rows('gallery')): ?>
+        <section class="section section-images">
+            <div class="container">
+                <div class="row">
+                    <?php while (have_rows('gallery')) : the_row(); ?>
+                    <?php $image = get_sub_field('image'); ?>
+                    <div class="col-sm-6 col-md-3">
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </section>
+        <?php endif; ?>
 
-	<?php endwhile; ?>
 
-	<?php else: ?>
 
-		<!-- article -->
-		<article>
+        <?php get_template_part('cta'); ?>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+    </main>
 
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
