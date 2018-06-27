@@ -41,7 +41,7 @@
                     <?php if ($className == ' section-left'): ?>
                         <div class="col-xs-12 col-md-6 align-vertical">
                             <div class="content">
-                                <h2><?php the_sub_field('heading'); ?></h2>
+                                <h2><a href="<?php the_sub_field('link');?>"><?php the_sub_field('heading'); ?></a></h2>
                                 <p class="spaced"><?php the_sub_field('text'); ?></p>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                         <?php endif; ?>
                         <div class="col-xs-12 col-md-6 align-vertical">
                             <div class="content">
-                                <h2><?php the_sub_field('heading'); ?></h2>
+                                <h2><a href="<?php the_sub_field('link');?>"><?php the_sub_field('heading'); ?></a></h2>
                                 <p class="spaced"><?php the_sub_field('text'); ?></p>
                             </div>
                         </div>

@@ -60,17 +60,17 @@
 
                     <div class="address img img-line img-styling-top">
                         <h3><?php the_field('contact_heading_2'); ?></h3>
+                        <?php if (have_rows('contact_information_2')): ?>
                         <ul class="contacts">
+                            <?php while (have_rows('contact_information_2')) : the_row(); ?>
                             <li>
-                                <a href="#">vardenis@aredodeko.lt</a>
+                                <a href="<?php the_sub_field('link'); ?>">
+                                    <?php the_sub_field('text'); ?>
+                                </a>
                             </li>
-                            <li>
-                                <a href="#">+370 123 45678 </a>
-                            </li>
-                            <li>
-                                <a href="#">linkedin: v_pavardenis</a>
-                            </li>
+                            <?php endwhile; ?>
                         </ul>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -80,31 +80,31 @@
                 <h2>Kontaktai</h2>
                 <div>
                     <h4><?php the_field('contact_heading_3'); ?></h4>
+                    <?php if (have_rows('contact_information_3')): ?>
                     <ul class="contacts">
+                        <?php while (have_rows('contact_information_3')) : the_row(); ?>
                         <li>
-                            <a href="#">vardenis@aredodeko.lt</a>
+                            <a href="<?php the_sub_field('link'); ?>">
+                                <?php the_sub_field('text'); ?>
+                            </a>
                         </li>
-                        <li>
-                            <a href="#">+370 123 45678 </a>
-                        </li>
-                        <li>
-                            <a href="#">linkedin: v_pavardenis</a>
-                        </li>
+                        <?php endwhile; ?>
                     </ul>
+                    <?php endif; ?>
                 </div>
                 <div>
                     <h4><?php the_field('contact_heading_4'); ?></h4>
+                    <?php if (have_rows('contact_information_4')): ?>
                     <ul class="contacts">
+                        <?php while (have_rows('contact_information_4')) : the_row(); ?>
                         <li>
-                            <a href="#">vardenis@aredodeko.lt</a>
+                            <a href="<?php the_sub_field('link'); ?>">
+                                <?php the_sub_field('text'); ?>
+                            </a>
                         </li>
-                        <li>
-                            <a href="#">+370 123 45678 </a>
-                        </li>
-                        <li>
-                            <a href="#">linkedin: v_pavardenis</a>
-                        </li>
+                        <?php endwhile; ?>
                     </ul>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
