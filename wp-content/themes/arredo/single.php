@@ -65,7 +65,10 @@
                     <?php while (have_rows('gallery')) : the_row(); ?>
                     <?php $image = get_sub_field('image'); ?>
                     <div class="col-sm-6 col-md-3">
-                        <div class="background" style="background-image:url(<?php echo $image['url']; ?>);"></div>
+                        <a href="#">
+                            <div class="background lightbox" data-mfp-src="<?php echo $image['url']; ?>" style="background-image:url(<?php echo $image['url']; ?>);">
+                            </div>
+                        </a>
                     </div>
                     <?php endwhile; ?>
                 </div>
@@ -79,5 +82,10 @@
 
     </main>
 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('.lightbox').magnificPopup({type:'image'});
+        });
+    </script>
 
 <?php get_footer(); ?>
