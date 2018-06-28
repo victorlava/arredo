@@ -1,4 +1,4 @@
-<section class="section section-quote" style="background-image:url(<?php echo get_field('quote_background', 'option')['url']; ?>);">
+<section class="section section-quote bg-overlay" style="background-image:url(<?php echo get_field('quote_background', 'option')['url']; ?>);">
     <div class="container">
         <div class="row">
             <blockquote class="quote">

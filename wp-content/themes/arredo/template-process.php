@@ -16,7 +16,7 @@
 		    </div>
 
 		    <div class="heading-flex">
-		        <div class="heading-column background"
+		        <div class="heading-column background bg-overlay"
 				style="background-image:url(<?php echo $background['url']; ?>);">
 
 		        </div>
@@ -26,14 +26,14 @@
 		        </div>
 
 		        <div class="heading-column heading-reverse">
-		            <div class="heading-row background"
+		            <div class="heading-row background bg-overlay"
 					style="background-image:url(<?php echo $background['url']; ?>);">
 
 		            </div>
 		            <div class="heading-row">
 
 		            </div>
-		            <div class="heading-row background"
+		            <div class="heading-row background bg-overlay"
 					style="background-image:url(<?php echo $background['url']; ?>);">
 
 		            </div>
@@ -72,31 +72,10 @@
 					<?php endif; ?>
                     <div class="col-xs-12 col-md-6 align-vertical">
                         <div class="content">
-                            <h2>Medžiagos</h2>
+                            <h2><?php the_field('carousel_heading'); ?></h2>
                             <p class="spaced">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                <?php the_field('carousel_description'); ?>
                             </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section-featured section-right">
-            <div class="container-fluid">
-                <div class="row">
-                    <?php $image = get_field('about_image'); ?>
-                    <?php if ($image): ?>
-                    <div class="col-xs-12 col-md-12 col-lg-6 offset-section-left">
-                        <div class="img img-wooden img-wooden-circle img-styling-right">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                        </div>
-                    </div>
-                    <?php endif; ?>
-                    <div class="col-xs-12 col-md-12 col-lg-6 align-vertical">
-                        <div class="content">
-                            <h2><?php the_field('about_heading'); ?></h2>
-                            <p><?php the_field('about_text'); ?></p>
                         </div>
                     </div>
                 </div>

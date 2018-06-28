@@ -1,4 +1,4 @@
-<section class="section section-cta" style="background-image:url(<?php echo get_field('contact_section_background', 'option')['url']; ?>);">
+<section class="section section-cta bg-overlay" style="background-image:url(<?php echo get_field('contact_section_background', 'option')['url']; ?>);">
     <div class="container">
         <div class="cta">
             <h3 class="title"><?php the_field('contact_section_text', 'option');?></h3>

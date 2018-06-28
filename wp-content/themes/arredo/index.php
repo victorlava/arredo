@@ -2,7 +2,7 @@
 
     <main>
 
-        <section class="section section-intro" style="background-image: url(<?php echo get_field('main_image')['url']; ?>);">
+        <section class="section section-intro bg-overlay" style="background-image: url(<?php echo get_field('main_image')['url']; ?>);">
             <h1>
                 <?php the_field('main_heading'); ?>
             </h1>
@@ -89,7 +89,7 @@
                         <div class="section-gallery-background" style="background-image:url('<?php echo get_field('image_2')['url']; ?>');">
                             <a href="<?php the_field('image_2_link'); ?>"></a>
                         </div>
-                        <div class="section-gallery-text img img-line">
+                        <div class="section-gallery-text img img-line bg-overlay" style="background-image:url('<?php echo get_field('quote_background', 'option')['url']; ?>');">
                             <a href="<?php the_field('heading_link'); ?>">
                                 <h2><?php the_field('images_heading'); ?></h2>
                                 <p class="spaced"><?php the_field('images_text'); ?></p>

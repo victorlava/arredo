@@ -5,10 +5,10 @@
 					<a href="<?php echo home_url(); ?>" class="logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
 					</a>
-					<?php the_field('footer_text', 'option');?>
+					<p><?php the_field('footer_text', 'option');?></p>
 				</div>
 				<div class="col-xs-12 col-md-6 col-lg-3">
-					<h6 class="title">Menu</h6>
+					<h6 class="title">Meniu</h6>
 					<?php arredo_footer_nav_left(); ?>
 				</div>
 				<div class="col-xs-12 col-md-6 col-lg-3">

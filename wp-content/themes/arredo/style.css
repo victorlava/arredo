@@ -2590,6 +2590,7 @@ blockquote {
   margin: 1rem 0;
   background-color: black;
   padding: 1.5rem 0 1.5rem 1.5rem;
+  background-size: cover;
 }
 
 .section.section-gallery .section-gallery-text h2 {
@@ -2704,6 +2705,7 @@ blockquote {
   top: 80px;
   left: 0;
   right: 0;
+  z-index: 1;
 }
 
 .section-heading.section-heading-xs {
@@ -2735,7 +2737,8 @@ blockquote {
 .heading-column.background, .heading-column .background {
   background-image: url("/img/background-intro.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
+  position: relative;
 }
 
 @media (min-width: 1575px) {
@@ -2746,7 +2749,7 @@ blockquote {
 
 .heading-column:nth-child(1) {
   flex: 100%;
-  background-position: center left;
+  background-position: top left;
 }
 
 @media (min-width: 768px) {
@@ -2770,7 +2773,7 @@ blockquote {
 
 .heading-column.heading-reverse .heading-row:nth-child(1) {
   flex: 4 4;
-  background-position: right top;
+  background-position: top right;
 }
 
 .heading-column.heading-reverse .heading-row:nth-child(2) {
@@ -2779,7 +2782,7 @@ blockquote {
 
 .heading-column.heading-reverse .heading-row:nth-child(3) {
   flex: 7 7;
-  background-position: right bottom;
+  background-position: bottom right;
 }
 
 .section-contact {
@@ -3095,6 +3098,10 @@ ul.contacts a:first-child {
   position: relative;
 }
 
+.img > a {
+  display: block;
+}
+
 .img.img-wooden:before {
   display: none;
   content: " ";
@@ -3201,6 +3208,32 @@ ul.contacts a:first-child {
     top: -15%;
     transform-origin: left;
   }
+}
+
+.bg-overlay {
+  position: relative;
+}
+
+.bg-overlay:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #221f20;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+.bg-overlay > div, .bg-overlay h1, .bg-overlay h2, .bg-overlay h3, .bg-overlay p, .bg-overlay a {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-overlay.section-gallery-text.bg-overlay:after {
+  opacity: 0.95;
 }
 
 /* 04. Pages */

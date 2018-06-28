@@ -15,7 +15,7 @@
 		    </div>
 
 		    <div class="heading-flex">
-		        <div class="heading-column background"
+		        <div class="heading-column background bg-overlay"
 				style="background-image:url(<?php echo $background['url']; ?>);">
 
 		        </div>
@@ -25,7 +25,7 @@
 		        </div>
 
 		        <div class="heading-column heading-reverse">
-		            <div class="heading-row background"
+		            <div class="heading-row background bg-overlay"
 					style="background-image:url(<?php echo $background['url']; ?>);">
 
 		            </div>
@@ -75,36 +75,16 @@
                 </div>
             </div>
             <div></div>
-            <div class="contact-box"
+            <div class="contact-box bg-overlay"
                 style="background-image:url(<?php echo $background['url']; ?>);">
                 <h2>Kontaktai</h2>
                 <div>
                     <h4><?php the_field('contact_heading_3'); ?></h4>
-                    <?php if (have_rows('contact_information_3')): ?>
-                    <ul class="contacts">
-                        <?php while (have_rows('contact_information_3')) : the_row(); ?>
-                        <li>
-                            <a href="<?php the_sub_field('link'); ?>">
-                                <?php the_sub_field('text'); ?>
-                            </a>
-                        </li>
-                        <?php endwhile; ?>
-                    </ul>
-                    <?php endif; ?>
+                    <?php the_sub_field('contact_information_3'); ?>
                 </div>
                 <div>
                     <h4><?php the_field('contact_heading_4'); ?></h4>
-                    <?php if (have_rows('contact_information_4')): ?>
-                    <ul class="contacts">
-                        <?php while (have_rows('contact_information_4')) : the_row(); ?>
-                        <li>
-                            <a href="<?php the_sub_field('link'); ?>">
-                                <?php the_sub_field('text'); ?>
-                            </a>
-                        </li>
-                        <?php endwhile; ?>
-                    </ul>
-                    <?php endif; ?>
+                    <?php the_sub_field('contact_information_4'); ?>
                 </div>
             </div>
         </section>

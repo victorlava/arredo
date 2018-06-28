@@ -14,7 +14,7 @@
             </div>
 
             <div class="heading-flex">
-                <div class="heading-column background"
+                <div class="heading-column background bg-overlay"
                 style="background-image:url(<?php echo $background['url']; ?>);">
 
                 </div>
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="heading-column heading-reverse">
-                    <div class="heading-row background"
+                    <div class="heading-row background bg-overlay"
                     style="background-image:url(<?php echo $background['url']; ?>);">
 
                     </div>
