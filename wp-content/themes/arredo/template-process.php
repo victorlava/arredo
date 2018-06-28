@@ -85,7 +85,7 @@
         <?php if (have_rows('objects')): ?>
         <?php $i = 0; ?>
         <?php while (have_rows('objects')) : the_row(); ?>
-        <?php $className = ($i % 2 > 0)? ' section-left' : ' section-right'; ?>
+        <?php $className = ($i % 2 > 0)? ' section-right' : ' section-left'; ?>
         <section class="section section-simple<?php echo $className; ?>">
             <div class="container">
                 <div class="row">
