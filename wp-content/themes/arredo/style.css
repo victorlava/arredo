@@ -2838,7 +2838,7 @@ blockquote {
 .section-contact .contact-box {
   background-image: url("/img/background-intro.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw;
   background-position: bottom right;
   color: white;
   padding: 4rem 2rem;
