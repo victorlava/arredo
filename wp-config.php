@@ -18,15 +18,18 @@
  * @package WordPress
  */
 
+define('WP_HOME','http://46.101.134.95');
+define('WP_SITEURL','http://46.101.134.95');
+
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'arredo' );
 
 /** MySQL database username */
-define( 'DB_USER', 'wp' );
+define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'wp' );
+define( 'DB_PASSWORD', '18e7e07f2b48d07975f94a33ed09e134c0626b6d357b1c59' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
