@@ -65,7 +65,7 @@
                     <?php while (have_rows('gallery')) : the_row(); ?>
                     <?php $image = get_sub_field('image'); ?>
                     <div class="col-sm-6 col-md-3">
-                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <div class="background" style="background-image:url(<?php echo $image['url']; ?>);"></div>
                     </div>
                     <?php endwhile; ?>
                 </div>
