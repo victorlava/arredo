@@ -2171,7 +2171,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3.2rem;
+  font-size: 1.88rem;
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
 }
@@ -2245,6 +2245,18 @@ a {
   text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6, .section-cta a .btn {
+  text-transform: uppercase;
+}
+
+.navigation {
+  text-transform: lowercase;
+}
+
+.quote .title {
+  text-transform: initial;
+}
+
 h1, h2, h3, h4, h5, h6, .navigation {
   font-family: "Josefin Sans", "Tahoma", sans-serif;
   font-weight: 400;
@@ -2256,9 +2268,15 @@ h1 {
 }
 
 h2 {
-  font-size: 3.2rem;
+  font-size: 1.88rem;
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: 2.82rem;
+  }
 }
 
 h3 {
@@ -2673,19 +2691,19 @@ blockquote {
   margin: 2rem 0;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .section-left .content {
     padding-right: 25%;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .section-left.section-featured .content {
     padding-right: 25%;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .section-right .content {
     padding-left: 25%;
   }
