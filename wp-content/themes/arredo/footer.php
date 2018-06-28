@@ -5,7 +5,7 @@
 					<a href="<?php echo home_url(); ?>" class="logo">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
 					</a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<?php the_field('footer_text', 'option');?>
 				</div>
 				<div class="col-xs-12 col-md-6 col-lg-3">
 					<h6 class="title">Menu</h6>
